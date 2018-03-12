@@ -15,9 +15,9 @@
 
 <section class="product-list">
 	<div class="container">
-		<!--cache ['Store', Product.latest] do -->
+		
 			<% @products.each do |product| %>
-				<!--cache ['entry', product] do -->
+				
 				<div class="entry row">
 					<div class="col-md-12">
 						<div class="product">
@@ -38,16 +38,18 @@
 										<p>
 											<%= product.description %>
 										</p>
-		                
+		                				<%= button_to product_items_path(product_id: product), class: 'btn btn-default' do %>
+											<i class="fa fa-shopping-cart"></i> Add to cart
+										<% end %>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div><!-- /.row -->
-				<!--end-->
+				
 			<% end %>
-		<!--end-->
+		
 	</div>
 </section>
 

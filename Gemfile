@@ -11,6 +11,7 @@ gem 'font-awesome-rails'
 gem 'paperclip' #image upload
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'toastr-rails' #for notifications
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.5'
