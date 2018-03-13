@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
 			if @result.success?
 				Cart.destroy(session[:cart_id]) #no longer need cart with these products if order placed
 				session[:cart_id] = nil
-				OrderNotifier.received(@order).deliver 
+				#OrderNotifier.received(@order).deliver 
 				redirect_to root_url, notice: 'Thank You for Your Order!'
 			else 
 				flash[:error] = 'There was an error with payment'

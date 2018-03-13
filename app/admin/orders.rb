@@ -4,7 +4,7 @@ ActiveAdmin.register Order do
 	
 	#send email to user to say the order has been shipped after the status is changed
 	after_update do |order|
-		OrderNotifier.shipped(@order).deliver if order.shipped
+		#OrderNotifier.shipped(@order).deliver if order.shipped
 	end
 
 	show do |order|
