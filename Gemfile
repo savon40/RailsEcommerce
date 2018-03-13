@@ -12,6 +12,8 @@ gem 'paperclip' #image upload
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'toastr-rails' #for notifications
+gem "braintree" #payment processing
+gem 'figaro' #for hiding the braintree api keys
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.5'

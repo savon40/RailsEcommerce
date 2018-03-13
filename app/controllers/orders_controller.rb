@@ -14,18 +14,30 @@ class OrdersController < ApplicationController
 			return
 		end
 		@order = Order.new
+		@client_token = Braintree::ClientToken.generate
+		
+		#@client_token = @gateway.client_token.generate
 	end
 	
 	def create
 		@order = Order.new(order_params)
 		@order.add_product_items_from_cart(@cart)
 		if @order.save
-			Cart.destroy(session[:cart_id]) #no longer need cart with these products if order placed
-			session[:cart_id] = nil
-			OrderNotifier.received(@order).deliver 
-			redirect_to root_url, notice: 'Thank You for Your Order!'
+			charge 
+			if @result.success?
+				Cart.destroy(session[:cart_id]) #no longer need cart with these products if order placed
+				session[:cart_id] = nil
+				OrderNotifier.received(@order).deliver 
+				redirect_to root_url, notice: 'Thank You for Your Order!'
+			else 
+				flash[:error] = 'There was an error with payment'
+				redirect_to root_url, alert: @result.message
+				@order.destroy
+			end
 		else
-		  render :new, notice: 'Please check your form'
+		  @client_token = Braintree::ClientToken.generate
+		  #@client_token = @gateway.client_token.generate
+		  render :new
 		end
 	end
 	
@@ -45,6 +57,13 @@ class OrdersController < ApplicationController
 	
 	def order_params
 		params.require(:order).permit(:name, :email, :address, :city, :country)
+	end
+	
+	def charge
+		#test braintree transaction
+		@result = Braintree::Transaction.sale(
+		  amount: @cart.total_price,
+		  payment_method_nonce: params[:payment_method_nonce] )
 	end
   	
 end

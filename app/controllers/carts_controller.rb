@@ -26,7 +26,7 @@ class CartsController < ApplicationController
 	end
 	
 	def invalid_cart
-		logger_error 'You are trying to access an invalid cart'
+		logger_error = 'You are trying to access an invalid cart'
 		redirect_to shop_url, notice: 'Invalid Cart'
 	end
 end
