@@ -5,12 +5,15 @@ class ProductItemsController < ApplicationController
 	before_action :set_product_item, only: [:show, :destroy]
 	
 	def create
+		logger.info 'product id: ' + params[:product_id]
 		product = Product.find(params[:product_id])
+		logger.info 'HERE IS THE PRODUCT' 
+		logger.info product.title
 		@product_item = @cart.add_product(product.id)
 		if @product_item.save
 		  redirect_to shop_url, notice: 'Product added to Cart'
 		else
-		  render :new
+		  redirect_to shop_url, notice: 'Could Not Add Item To Cart'
 		end
 	end
 	
