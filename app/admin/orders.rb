@@ -1,10 +1,11 @@
 ActiveAdmin.register Order do
 	
-	# permit_params :shipped
+	permit_params :shipped
 	
-	# after_update do |order|
-	# 	OrderNotifier.shipped(@order).deliver if order.shipped
-	# end
+	#send email to user to say the order has been shipped after the status is changed
+	after_update do |order|
+		OrderNotifier.shipped(@order).deliver if order.shipped
+	end
 
 	show do |order|
 	  

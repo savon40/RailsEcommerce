@@ -56,7 +56,7 @@ class OrdersController < ApplicationController
 	end
 	
 	def order_params
-		params.require(:order).permit(:name, :email, :address, :city, :country)
+		params.require(:order).permit(:name, :email, :address, :city, :state, :country)
 	end
 	
 	def charge
