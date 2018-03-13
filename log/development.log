@@ -5373,3 +5373,91 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 468ms (Views: 463.5ms | ActiveRecord: 2.3ms)
 
 
+Started GET "/" for 10.240.0.207 at 2018-03-13 20:05:15 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered shared/_list.html.erb (51.2ms)
+  Rendered pages/index.html.erb within layouts/application (918.2ms)
+  [1m[36mProductItem Load (0.3ms)[0m  [1m[34mSELECT "product_items".* FROM "product_items" WHERE "product_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered shared/_header.html.erb (27.0ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (2.8ms)
+Completed 200 OK in 1336ms (Views: 1268.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shop" for 10.240.0.233 at 2018-03-13 20:06:20 +0000
+Cannot render console from 10.240.0.233! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#shop as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering pages/shop.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered pages/shop.html.erb within layouts/application (11.5ms)
+  [1m[36mProductItem Load (0.2ms)[0m  [1m[34mSELECT "product_items".* FROM "product_items" WHERE "product_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered shared/_header.html.erb (3.3ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (2.3ms)
+Completed 200 OK in 265ms (Views: 261.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.240.1.136 at 2018-03-13 20:06:22 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered shared/_list.html.erb (5.2ms)
+  Rendered pages/index.html.erb within layouts/application (11.6ms)
+  [1m[36mProductItem Load (0.2ms)[0m  [1m[34mSELECT "product_items".* FROM "product_items" WHERE "product_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (3.0ms)
+Completed 200 OK in 363ms (Views: 359.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shop" for 10.240.0.238 at 2018-03-13 20:06:25 +0000
+Cannot render console from 10.240.0.238! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#shop as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering pages/shop.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered pages/shop.html.erb within layouts/application (10.5ms)
+  [1m[36mProductItem Load (0.2ms)[0m  [1m[34mSELECT "product_items".* FROM "product_items" WHERE "product_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered shared/_header.html.erb (3.0ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (2.5ms)
+Completed 200 OK in 268ms (Views: 265.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.240.0.171 at 2018-03-13 20:06:26 +0000
+Cannot render console from 10.240.0.171! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered shared/_list.html.erb (5.2ms)
+  Rendered pages/index.html.erb within layouts/application (11.6ms)
+  [1m[36mProductItem Load (0.2ms)[0m  [1m[34mSELECT "product_items".* FROM "product_items" WHERE "product_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered shared/_header.html.erb (3.1ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (2.6ms)
+Completed 200 OK in 268ms (Views: 264.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shop" for 10.240.1.136 at 2018-03-13 20:06:32 +0000
+Cannot render console from 10.240.1.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#shop as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering pages/shop.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered pages/shop.html.erb within layouts/application (14.5ms)
+  [1m[36mProductItem Load (0.2ms)[0m  [1m[34mSELECT "product_items".* FROM "product_items" WHERE "product_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered shared/_header.html.erb (2.9ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (2.4ms)
+Completed 200 OK in 263ms (Views: 254.9ms | ActiveRecord: 0.9ms)
+
+

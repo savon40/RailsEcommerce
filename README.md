@@ -1,3 +1,3 @@
 # README
 
-https://bitbucket.org/LuciyR/store - bitbucket link for instructor
+Basic online store created with Rails and BrainTree (a payment processing service from PayPal)
